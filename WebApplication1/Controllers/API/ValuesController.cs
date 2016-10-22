@@ -9,10 +9,15 @@ namespace WebApplication1.Controllers.API
 {
     public class ValuesController : ApiController
     {
+        private static List<string> strings = new List<string>()
+        {
+            "value1", "value2"
+        };
+
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return strings;
         }
 
         // GET api/<controller>/5
